@@ -6,7 +6,6 @@ StudyNotion is a fully functional ed-tech learning platform that enables users t
 *	A seamless and interactive learning experience for students, making education more accessible and engaging.
 *	A platform for instructors to showcase their expertise and connect with learners across the globe.
 
-***
 ## Features
 
 * User Authentication: Study Notion provides secure user registration and authentication using JWT (JSON Web Tokens). Users can sign up, log in, and manage their 
@@ -106,7 +105,6 @@ StudyNotion is deployed on various cloud-based services:
 
 This infrastructure ensures scalability, security, and reliability.
 
-***
 ## Installation and Setup
 
 This starter pack includes a basic setup for using **Tailwind CSS with React**. To start building your own components and styles, follow these steps:
@@ -127,12 +125,10 @@ This starter pack includes a basic setup for using **Tailwind CSS with React**. 
     ```
 1. Open the project in your browser at [http://localhost:3000](http://localhost:3000) to view your project.
 
-***
 ## Contributing
 
 Contributions are welcome! If you have any suggestions or find any issues, please feel free to open an issue or a pull request. 
 
-***
 ## Contact
 - Email: chiragkhaitan2014@gmail.com
 - Linkedin: https://www.linkedin.com/in/chirag-khaitan
