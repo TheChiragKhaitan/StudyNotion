@@ -1,0 +1,447 @@
+/* write your css here */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body{
+    overflow-x: hidden;
+    overscroll-behavior: auto;
+    scroll-behavior: smooth;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #afb2bf;
+}
+
+/* Chrome, Edge, and Safari */
+/* *::-webkit-scrollbar {
+  width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #000814;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #afb2bf;
+  border-radius: 10px;
+  visibility: hidden;
+} */
+
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000814;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #afb2bf;
+    border-radius: 4px;
+    visibility: hidden;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6E727F;
+  }
+}
+
+*:active::-webkit-scrollbar-thumb,
+*:focus::-webkit-scrollbar-thumb,
+*:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+/* View-Course Sidebar */
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -18px}
+  100%  {opacity: 1; margin-left: 0px}
+}
+
+/* detalil tag opening animation */
+details.detailanimatation{
+
+  transition: all 0.5s linear;
+  max-height: 100px;
+  overflow: hidden;
+
+}
+details.detailanimatation[open]{
+  max-height: 1000px;
+}
+
+/* rotate className arrow on detail open */
+details[open] summary .arrow {
+  transform: rotatex(180deg);
+  transition: all 0.1s linear;
+}
+
+details summary::-webkit-details-marker {
+  display:none !important;
+}
+details > summary {
+  list-style: none !important;
+}
+details > summary::-webkit-details-marker {
+  display: none !important;
+}
+
+/* HomePage Elements */
+
+.codeblock1 {
+    width: 372.95px;
+    height: 257.05px;
+    border-radius: 100%;
+    left: calc(50% - 372.95px / 2 - 76.53px);
+    top: calc(50% - 257.05px / 2 - 47.47px);
+    background: linear-gradient(
+      123.77deg,
+      #8a2be2 -6.46%,
+      #ffa500 59.04%,
+      #f8f8ff 124.53%
+    );
+    opacity: 0.2;
+    filter: blur(34px);
+    transform: matrix(1, 0, -0.03, 1, 0, 0);
+}
+.codeblock2 {
+    position: absolute;
+    width: 372.95px;
+    height: 257.05px;
+    left: calc(50% - 372.95px / 2 - 76.53px);
+    top: calc(50% - 257.05px / 2 - 47.47px);
+    border-radius: 100%;
+    background: linear-gradient(
+      118.19deg,
+      #1fa2ff -3.62%,
+      #12d8fa 50.44%,
+      #a6ffcb 104.51%
+    );
+    opacity: 0.2;
+    filter: blur(34px);
+    transform: matrix(1, 0, -0.03, 1, 0, 0);
+}
+.code-border {
+    border: 2px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right bottom, #ffffff38, #ffffff00);
+    background: linear-gradient(
+      111.93deg,
+      rgba(14, 26, 45, 0.24) -1.4%,
+      rgba(17, 30, 50, 0.38) 104.96%
+    );
+    /* backdrop-filter: blur(26px); */
+}
+
+.homepage_bg {
+    background: url("../src/assets/Images/bghome.svg");
+    /* background-size: contain; */
+  }
+
+/* .spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 9px solid #0f7a9d;
+    animation: spinner-bulqg1 0.8s infinite linear alternate, spinner-oaa3wk 1.6s infinite linear;
+} */
+
+.section_heading {
+  --tw-text-opacity: 1;
+  color: rgb(241 242 255/var(--tw-text-opacity));
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+
+/* Swiper */
+
+.swiper-button-prev {
+  transform: translateY(-350%);
+  color: #dcdcdc !important;
+}
+
+.swiper-button-next {
+  transform: translateY(-350%);
+ color: #dcdcdc !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(186, 32, 32) !important;
+}
+.swiper-pagination-bullet{
+  transform: translateY(185%);
+  background-color: rgb(255, 255, 255) !important;
+}
+
+/* Contact Us Form */
+
+.form-style {
+  @apply rounded-lg bg-richblack-700 p-3 text-[16px] leading-[24px] text-richblack-5 shadow-[0_1px_0_0] shadow-white/50 placeholder:text-richblack-400 focus:outline-none;
+}
+
+.lable-style {
+  @apply text-[14px] text-richblack-5;
+}
+
+/* Spinner */
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.spinner::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #FF3D00 transparent;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Navbar and ProfileDropdown */
+
+.glass{
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+  
+.glass2{
+  /* From https://css.glass */
+  background: rgba(13, 18, 30, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.3px);
+    -webkit-backdrop-filter: blur(7.3px);
+  border: 1px solid rgba(13, 18, 30, 0.3);
+}
+
+.mobNav {
+  transition: all;
+  transition: 500ms;
+  transform: translatex(100vw);
+}
+
+.mobNav.navshow {
+  transition: all;
+  transition: 500ms;
+  transform: translateX(0vw);
+}
+
+/* CourseDetails Page Buttons */
+
+.yellowButton {
+  @apply cursor-pointer rounded-md bg-yellow-50 px-[20px] py-[8px] font-semibold text-richblack-900;
+}
+
+.blackButton {
+  @apply cursor-pointer rounded-md bg-richblack-800 px-[20px] py-[8px] font-semibold text-richblack-5;
+}
+
+/* View-Course Sidebar Checkbox styling */
+
+.checkbox-wrapper-19 {
+  box-sizing: border-box;
+  --background-color: transparent;
+  --checkbox-height: 13px;
+}
+
+@-moz-keyframes dothabottomcheck-19 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) / 2);
+  }
+}
+
+@-webkit-keyframes dothabottomcheck-19 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) / 2);
+  }
+}
+
+@keyframes dothabottomcheck-19 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) / 2);
+  }
+}
+
+@keyframes dothatopcheck-19 {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) * 1.2);
+  }
+}
+
+@-webkit-keyframes dothatopcheck-19 {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) * 1.2);
+  }
+}
+
+@-moz-keyframes dothatopcheck-19 {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) * 1.2);
+  }
+}
+
+.checkbox-wrapper-19 input[type=checkbox] {
+  display: none;
+}
+
+.checkbox-wrapper-19 .check-box {
+  height: var(--checkbox-height);
+  width: var(--checkbox-height);
+  background-color: transparent;
+  border: calc(var(--checkbox-height) * 0) solid #000;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: border-color ease 0.2s;
+  -o-transition: border-color ease 0.2s;
+  -webkit-transition: border-color ease 0.2s;
+  transition: border-color ease 0.2s;
+  cursor: pointer;
+}
+.checkbox-wrapper-19 .check-box::before,
+.checkbox-wrapper-19 .check-box::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  height: 0;
+  width: calc(var(--checkbox-height) * .2);
+  background-color: #21a629;
+  display: inline-block;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  border-radius: 5px;
+  content: " ";
+  -webkit-transition: opacity ease 0.5;
+  -moz-transition: opacity ease 0.5;
+  transition: opacity ease 0.5;
+}
+.checkbox-wrapper-19 .check-box::before {
+  top: calc(var(--checkbox-height) * .72);
+  left: calc(var(--checkbox-height) * .41);
+  box-shadow: 0 0 0 calc(var(--checkbox-height) * .05) var(--background-color);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.checkbox-wrapper-19 .check-box::after {
+  top: calc(var(--checkbox-height) * .37);
+  left: calc(var(--checkbox-height) * .05);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.checkbox-wrapper-19 input[type=checkbox]:checked + .check-box,
+.checkbox-wrapper-19 .check-box.checked {
+  border-color: #1e8a25;
+}
+.checkbox-wrapper-19 input[type=checkbox]:checked + .check-box::after,
+.checkbox-wrapper-19 .check-box.checked::after {
+  height: calc(var(--checkbox-height) / 2);
+  -moz-animation: dothabottomcheck-19 0.2s ease 0s forwards;
+  -o-animation: dothabottomcheck-19 0.2s ease 0s forwards;
+  -webkit-animation: dothabottomcheck-19 0.2s ease 0s forwards;
+  animation: dothabottomcheck-19 0.2s ease 0s forwards;
+}
+.checkbox-wrapper-19 input[type=checkbox]:checked + .check-box::before,
+.checkbox-wrapper-19 .check-box.checked::before {
+  height: calc(var(--checkbox-height) * 1.2);
+  -moz-animation: dothatopcheck-19 0.4s ease 0s forwards;
+  -o-animation: dothatopcheck-19 0.4s ease 0s forwards;
+  -webkit-animation: dothatopcheck-19 0.4s ease 0s forwards;
+  animation: dothatopcheck-19 0.4s ease 0s forwards;
+}
+
+@media (min-width: 768px) {
+  .offSidebar1 {
+    height: calc(100vh - 3.5rem) !important;
+    width: 320px !important;
+  }
+  .offSidebar2 {
+    display: block !important;
+  }
+  .offSidebar3{
+    width: fit-content !important;
+    height: fit-content !important; 
+  }
+}
+
